@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="postdetails.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-DMJfHn+WsLkEKxawtu5OVtX5J5v5EN18JuPxz5+CeuPDJiSExa/W21kQnL8xJGyHH3q4Cv4PzaxWewpnk0wI3w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="posts-container">
+      <!-- Post -->
+      <div class="post">
+        <div class="publisher">
+          <a href="#"
+            ><img
+              src=""
+              alt="Profile Picture"
+              class="publisher-img"
+              id="user-img"
+          /></a>
+          <b id="user-name"></b>
+        </div>
+        <span class="post-time" id="post-time"></span>
+        <p class="post-p" id="post-p"></p>
+        <img
+          src=""
+          alt="post image"
+          class="post-img"
+          id="post-img"
+        />
+        <div class="post-icons">
+          <span><i class="far fa-thumbs-up"></i> Like</span>
+          <span><i class="far fa-comment"></i> Comment</span>
+          <span><i class="fas fa-share"></i> Share</span>
+        </div>
+        <div id="comments"></div>
+        <div class="comment-box">
+          <form>
+            <textarea
+              class="write-comment"
+              placeholder="Add a comment..."
+            ></textarea>
+            <button class="submit-comment" type="submit">Add Comment</button>
+          </form>
+        </div>
+      </div>
+      <!-- Post -->
+    </div>
+
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      const userImage = document.getElementById("user-img");
+      const userN = document.getElementById("user-name");
+      const postTime = document.getElementById("post-time");
+      const postPragraph = document.getElementById("post-p");
+      const postImg = document.getElementById("post-img");
+      const commentsContainer = document.getElementById("comments");
+
+      // Get the query string from the current URL
+      const queryString = window.location.search;
+
+      // Create a new URLSearchParams object from the query string
+      const searchParams = new URLSearchParams(queryString);
+      console.log(searchParams);  
+
+      // Get the value of a specific parameter
+      const postID = searchParams.get("id");
+      axios.get(`https://tarmeezacademy.com/api/v1/posts/${postID}`).then((response) => {
+        console.log(response);
+        let data = response.data.data;
+        userImage.src = data.author.profile_image;
+        userN.innerHTML = data.author.name;
+        postTime.innerHTML = data.created_at;
+        postPragraph.innerHTML = data.body;
+        postImg.src = data.image;
+
+        //get comments from api
+        let comments = data.comments;
+        console.log(comments);
+        commentsContainer.innerHTML = comments.map((comment) => {
+          return `
+          <div id="comment">
+            <div>
+              <img src=${comment.author.profile_image} alt="">
+              <h3 id="publisher-comment">${comment.author.name}</h3>
+            </div>
+            <p>${comment.body}</p>
+          </div>
+          `;
+        }).join('');
+      });
+
+      function addComment() {
+        let commentFromUser = document.querySelector(".write-comment").value;
+        let commentData = {
+          body: commentFromUser,
+        };
+        let token = localStorage.getItem("token");
+        axios
+          .post(`https://tarmeezacademy.com/api/v1/posts/${postID}/comments`, commentData, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .then((response) => {
+            console.log(response);
+            // Once the comment is added, update the comments section
+            let newComment = response.data.data;
+            commentsContainer.innerHTML += `
+              <div id="comment">
+                <div>
+                  <img src=${newComment.author.profile_image} alt="">
+                  <h3 id="publisher-comment">${newComment.author.name}</h3>
+                </div>
+                <p>${newComment.body}</p>
+              </div>
+            `;
+            // Clear the comment form
+            document.querySelector(".write-comment").value = "";
+          })
+          .catch((error) => {
+            alert(error.response.data.message);
+          });
+      }
+
+      document
+        .querySelector(".submit-comment")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          addComment();
+        });
+    </script>
+  </body>
+</html>

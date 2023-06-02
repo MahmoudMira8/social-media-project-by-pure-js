@@ -1,0 +1,66 @@
+.container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 88%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+  }
+
+  input[type="file"] {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  input[type="file"]::-webkit-file-upload-button {
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="file"]::-moz-focus-inner {
+    border: none;
+  }
+  
+  
+  button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 20px;
+    text-align: center;
+  }
+  

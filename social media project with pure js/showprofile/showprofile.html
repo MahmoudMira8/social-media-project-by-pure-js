@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="showprofile.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-DMJfHn+WsLkEKxawtu5OVtX5J5v5EN18JuPxz5+CeuPDJiSExa/W21kQnL8xJGyHH3q4Cv4PzaxWewpnk0wI3w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+    <!--show alert to edit post-->
+
+    <div id="editPostAlert" class="edit-post-alert">
+      <div class="edit-post-alert-container">
+        <h2>Edit post</h2>
+        <label for="editPostTitle">Title</label>
+        <textarea id="editPostTitle" placeholder="Enter post title"></textarea>
+        <label for="editPostImg">Image</label>
+        <input type="file" id="editPostImg" />
+        <button id="editSubmitPostButton" >Submit</button>
+      </div>
+    </div>
+
+    <!--edit post button-->
+
+    <div id="show-profile">
+      <nav>
+        <ul>
+          <li class="user-img">
+            <img
+              id="user-img"
+              src="/img/_4d59b5fb-853f-4c9a-98cb-6a04fb8f0709.jpeg"
+              alt="Mahmoud"
+            />
+          </li>
+          <li id="profile-name"><a href="#">Name</a></li>
+          <li id="home"><a href="#">Home</a></li>
+        </ul>
+      </nav>
+
+      <div id="profile-info">
+        <div class="left-part">
+          <div id="email">mahmoud@gmail.com</div>
+          <div id="name"></div>
+          <div id="user-name">mahmoud mira</div>
+        </div>
+        <div class="right-part">
+          <div id="posts-number">posts: 50</div>
+          <div id="comments-number">comments: 70</div>
+        </div>
+      </div>
+
+      <div id="user-posts">
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-key.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="showprofile.js"></script>
+  </body>
+  <html></html>
+</html>

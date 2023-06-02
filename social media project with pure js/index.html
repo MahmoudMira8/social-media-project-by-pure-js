@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-DMJfHn+WsLkEKxawtu5OVtX5J5v5EN18JuPxz5+CeuPDJiSExa/W21kQnL8xJGyHH3q4Cv4PzaxWewpnk0wI3w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--lodeder html-->
+    <div id="loader" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; justify-content: center; background-color: #f0f0f0; padding: 5px; border-radius: 50%;">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    
+    
+    <!--//loader html//-->
+
+    <!--show alert to create post-->
+
+    <button id="create-post-button">Create Post</button>
+
+    <div id="createPostAlert" class="create-post-alert">
+      <div class="create-post-alert-container">
+        <h2>Create a new post</h2>
+        <label for="postTitle">Title</label>
+        <textarea id="postTitle" placeholder="Enter post title"></textarea>
+        <label for="postImage">Image</label>
+        <input type="file" id="postImage" />
+        <button id="submitPostButton">Submit</button>
+      </div>
+    </div>
+
+    <!--create post button-->
+
+    <!--create post button-->
+    <!--show alert to create post-->
+
+    <!--show alert to edit post-->
+
+    <div id="editPostAlert" class="edit-post-alert">
+      <div class="edit-post-alert-container">
+        <h2>Edit post</h2>
+        <label for="editPostTitle">Title</label>
+        <textarea id="editPostTitle" placeholder="Enter post title"></textarea>
+        <label for="editPostImg">Image</label>
+        <input type="file" id="editPostImg" />
+        <button id="editSubmitPostButton">Submit</button>
+      </div>
+    </div>
+
+    <!--edit post button-->
+
+    <!--container-->
+    <div class="container">
+      <div>
+        <!-- Navbar -->
+        <nav>
+          <ul class="left-nav">
+            <li class="user-img">
+              <img
+                src="/img/_4d59b5fb-853f-4c9a-98cb-6a04fb8f0709.jpeg"
+                alt="Mahmoud"
+              />
+            </li>
+            <li class="logo" style="cursor: pointer"><a href="#">Name</a></li>
+            <li id="home-button" style="cursor: pointer">
+              <a href="#">Home</a>
+            </li>
+            <li id="show-profile"><a href="">Profile</a></li>
+          </ul>
+
+          <ul class="right-nav">
+            <li id="login"><a href="#">Login</a></li>
+            <li id="register"><a href="#">Register</a></li>
+            <li id="log-out"><a href="#">Log out</a></li>
+          </ul>
+        </nav>
+
+        <div id="posts-container">
+          <!-- Post -->
+          <div class="post">
+            <div class="publisher">
+              <a href="#"
+                ><img
+                  src="/img/_55711875-32ef-4a0c-9caf-91f4bca1652a.jpeg"
+                  alt="Profile Picture"
+                  class="publisher-img"
+              /></a>
+              <b>mahmoud</b>
+            </div>
+            <span class="post-time">2 min ago </span>
+            <p class="post-p">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              quo, aperiam facere ad sequi, eaque recusandae voluptas blanditiis
+              maiores nisi repellat consequuntur natus quasi expedita pariatur
+              doloremque. Accusamus, modi natus?
+            </p>
+            <img
+              src="/img/_4d59b5fb-853f-4c9a-98cb-6a04fb8f0709.jpeg"
+              alt="post image"
+              class="post-img"
+            />
+            <div class="post-icons">
+              <span><i class="far fa-thumbs-up"></i> Like</span>
+              <span><i class="far fa-comment"></i> Comment</span>
+              <span><i class="fas fa-share"></i> Share</span>
+            </div>
+          </div>
+          <!-- Post -->
+
+          <!-- Post -->
+          <div class="post">
+            <div class="publisher">
+              <a href="#"
+                ><img
+                  src="/img/_55711875-32ef-4a0c-9caf-91f4bca1652a.jpeg"
+                  alt="Profile Picture"
+                  class="publisher-img"
+              /></a>
+              <b>mahmoud</b>
+            </div>
+            <span class="post-time">2 min ago </span>
+            <p class="post-p">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              quo, aperiam facere ad sequi, eaque recusandae voluptas blanditiis
+              maiores nisi repellat consequuntur natus quasi expedita pariatur
+              doloremque. Accusamus, modi natus?
+            </p>
+            <img
+              src="/img/_4d59b5fb-853f-4c9a-98cb-6a04fb8f0709.jpeg"
+              alt="post image"
+              class="post-img"
+            />
+            <div class="post-icons">
+              <span><i class="far fa-thumbs-up"></i> Like</span>
+              <span><i class="far fa-comment"></i> Comment</span>
+              <span><i class="fas fa-share"></i> Share</span>
+            </div>
+          </div>
+          <!-- Post -->
+
+          <!-- Post -->
+          <div class="post">
+            <div class="publisher">
+              <a href="#"
+                ><img
+                  src="/img/_55711875-32ef-4a0c-9caf-91f4bca1652a.jpeg"
+                  alt="Profile Picture"
+                  class="publisher-img"
+              /></a>
+              <b>mahmoud</b>
+            </div>
+            <span class="post-time">2 min ago </span>
+            <p class="post-p">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              quo, aperiam facere ad sequi, eaque recusandae voluptas blanditiis
+              maiores nisi repellat consequuntur natus quasi expedita pariatur
+              doloremque. Accusamus, modi natus?
+            </p>
+            <img
+              src="/img/_4d59b5fb-853f-4c9a-98cb-6a04fb8f0709.jpeg"
+              alt="post image"
+              class="post-img"
+            />
+            <div class="post-icons">
+              <span><i class="far fa-thumbs-up"></i> Like</span>
+              <span><i class="far fa-comment"></i> Comment</span>
+              <span><i class="fas fa-share"></i> Share</span>
+            </div>
+          </div>
+          <!-- Post -->
+        </div>
+      </div>
+    </div>
+    <!--container-->
+
+    <!-- Font Awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-key.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/generalFunction.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="login/login.js"></script>
+  </body>
+</html>

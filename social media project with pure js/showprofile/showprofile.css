@@ -1,0 +1,208 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#show-profile {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#show-profile nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+#show-profile nav li {
+  margin: 0 10px;
+}
+
+#show-profile nav li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#profile-info {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  gap: 50px;
+}
+
+#profile-info .left-part, 
+#profile-info .right-part {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 15px;
+  background-color: #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Styles for user-posts container */
+#user-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  width: 80%;
+  align-items: center;
+}
+
+/* Styles for each post */
+.post {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Styles for publisher section */
+.publisher {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.publisher-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Styles for post time */
+.post-time {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Styles for post content */
+.post-p {
+  margin-bottom: 10px;
+}
+
+/* Styles for post image */
+.post-img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Styles for post icons */
+.post-icons span {
+  margin-right: 10px;
+  color: #888;
+  cursor: pointer;
+}
+
+.post-icons i {
+  margin-right: 5px;
+}
+
+/*syle for edit button*/
+.edit-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.edit-button:hover {
+  background-color: #3e8e41;
+}
+/*end syle for edit button*/
+
+/*syle for delete button*/
+.delete-button {
+  background-color: rgb(207, 31, 31); /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button:hover {
+  background-color: red;
+}
+/*end syle for edit button*/
+
+/*Edit post*/
+
+.edit-post-alert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.edit-post-alert-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.edit-post-alert h2 {
+  margin-top: 0;
+}
+
+.edit-post-alert label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.edit-post-alert input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.edit-post-alert button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-post-alert button:hover {
+  background-color: #2980b9;
+}
