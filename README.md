@@ -27,4 +27,7 @@ Link to the GitHub repository
 
 Special thanks to Tarmez Academy for providing the API used in this project. Their support and resources have been invaluable in the development of this learning exercise.
 
+![Uploading Screenshot 2023-06-02 at 12.16.10 PM.png…]()
+
+
 [Live Social Media Website](https://social-media-website-purejs.netlify.app/index.html)
