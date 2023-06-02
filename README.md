@@ -26,3 +26,5 @@ Link to the GitHub repository
 ## Acknowledgments
 
 Special thanks to Tarmez Academy for providing the API used in this project. Their support and resources have been invaluable in the development of this learning exercise.
+
+[Live Social Media Website](https://social-media-website-purejs.netlify.app/index.html)
